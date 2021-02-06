@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "voices-mvp": {
+      "hosting": {
+        "voices-site": [
+          "voices-mvp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "voices-mvp"
+  }
+}
