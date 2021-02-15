@@ -1,0 +1,11 @@
+.header{
+    height:75px;
+    display: flex;
+
+    .logo-wrapper {
+        padding: 5px;
+        .logo {
+            width: 65px;
+        }
+    }
+}

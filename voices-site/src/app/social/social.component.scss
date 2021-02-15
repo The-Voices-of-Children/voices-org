@@ -1,0 +1,85 @@
+@import '../../styles.scss';
+
+$facebook-color: #4267B2;
+$instagram-color: #e1306c;
+$youtube-color: #FF0000;
+
+.social-share-holder {
+  display: flex;
+
+  .social-button {
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    transition: background-color ease 0.3s;
+    cursor: pointer;
+    border-width:0;
+    position: relative;
+
+    .icon-background {
+      position:absolute;
+      display: inline-block;
+      width: 70%;
+      height: 70%;
+      background-color: $white-color;
+      border-radius: 50%;
+    }
+
+    .share-link {
+      width: 80%;
+      height: 80%;
+      z-index: 2;
+
+      .svg-holder {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+
+        ::ng-deep {
+          svg {
+            width: 100%;
+            height: 100%;
+            transition: fill ease 0.3s;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    &:hover, &:active {
+      background-color: $white-color;
+    }
+  }
+
+  .facebook {
+    .share-link .svg-holder ::ng-deep svg {
+      fill: $facebook-color;
+    }
+
+    &:hover, &:active {
+      background-color: $facebook-color;
+    }
+  }
+
+  .instagram {
+    .share-link .svg-holder ::ng-deep svg {
+      fill: $instagram-color;
+    }
+
+    &:hover, &:active {
+      background-color: $instagram-color;
+    }
+  }
+
+  .youtube {
+    .share-link .svg-holder ::ng-deep svg {
+      fill: $youtube-color;
+    }
+
+    &:hover, &:active {
+      background-color: $youtube-color;
+    }
+  }
+}
