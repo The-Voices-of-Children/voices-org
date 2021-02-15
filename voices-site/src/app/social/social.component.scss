@@ -13,13 +13,24 @@ $youtube-color: #FF0000;
     align-items: center;
     justify-content: center;
     margin: 5px;
-    //border: 1px solid;
     transition: background-color ease 0.3s;
     cursor: pointer;
+    border-width:0;
+    position: relative;
+
+    .icon-background {
+      position:absolute;
+      display: inline-block;
+      width: 70%;
+      height: 70%;
+      background-color: $white-color;
+      border-radius: 50%;
+    }
 
     .share-link {
-      width: 75%;
-      height: 75%;
+      width: 80%;
+      height: 80%;
+      z-index: 2;
 
       .svg-holder {
         display: inline-block;
@@ -28,10 +39,10 @@ $youtube-color: #FF0000;
 
         ::ng-deep {
           svg {
-            fill: $white-color;
             width: 100%;
             height: 100%;
             transition: fill ease 0.3s;
+            border-radius: 50%;
           }
         }
       }
@@ -43,35 +54,32 @@ $youtube-color: #FF0000;
   }
 
   .facebook {
-    background-color: $facebook-color;
-    border-color: $facebook-color;
+    .share-link .svg-holder ::ng-deep svg {
+      fill: $facebook-color;
+    }
 
     &:hover, &:active {
-      .share-link .svg-holder ::ng-deep svg {
-        fill: $facebook-color;
-      }
+      background-color: $facebook-color;
     }
   }
 
   .instagram {
-    background-color: $instagram-color;
-    border-color: $instagram-color;
+    .share-link .svg-holder ::ng-deep svg {
+      fill: $instagram-color;
+    }
 
     &:hover, &:active {
-      .share-link .svg-holder ::ng-deep svg {
-        fill: $instagram-color;
-      }
+      background-color: $instagram-color;
     }
   }
 
   .youtube {
-    background-color: $youtube-color;
-    border-color: $youtube-color;
+    .share-link .svg-holder ::ng-deep svg {
+      fill: $youtube-color;
+    }
 
     &:hover, &:active {
-      .share-link .svg-holder ::ng-deep svg {
-        fill: $youtube-color;
-      }
+      background-color: $youtube-color;
     }
   }
 }
