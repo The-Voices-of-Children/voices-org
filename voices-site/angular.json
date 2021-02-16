@@ -16,6 +16,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "uk",
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -25,6 +34,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "localize": true,
             "aot": true,
             "assets": [
               "src/favicon.ico",
@@ -36,6 +46,18 @@
             "scripts": []
           },
           "configurations": {
+            "en": {
+              "localize": ["en"],
+              "aot": true,
+              "outputPath": "dist/browser/",
+              "baseHref": "/en/"
+            },
+            "uk": {
+              "localize": ["uk"],
+              "aot": true,
+              "outputPath": "dist/browser/",
+              "baseHref": "/"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -73,6 +95,12 @@
           "configurations": {
             "production": {
               "browserTarget": "voices-site:build:production"
+            },
+            "en": {
+              "browserTarget": "voices-site:build:en"
+            },
+            "uk": {
+              "browserTarget": "voices-site:build:uk"
             }
           }
         },

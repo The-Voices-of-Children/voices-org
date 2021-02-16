@@ -4,7 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start:{lang_id}` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Deploying
+
+Run `npm run build-deploy` to deploy the application to firebase. It will build app for all locales and deploy in to firebase.
 
 ## Code scaffolding
 
