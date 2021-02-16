@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
@@ -25,7 +25,7 @@ import { SocialComponent } from './social/social.component';
     AngularFirestoreModule,
     AngularSvgIconModule.forRoot()
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'uk' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
