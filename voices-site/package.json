@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration=uk --open",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start:uk": "ng serve --configuration=uk --open",
+    "start:en": "ng serve --configuration=en --open",
+    "build-deploy": "ng build --prod --localize \n firebase deploy --only hosting:voices-site"
   },
   "private": true,
   "dependencies": {
