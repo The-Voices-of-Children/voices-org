@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LangService } from '../services/lang.service';
+import { Lang, LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-lang-select',
@@ -18,11 +18,14 @@ export class LangSelectComponent implements OnInit {
   }
 
   public langUrl(langId: string) {
-    return window.location.hostname + "/" + langId;
+    return "/" + langId;
   }
 
-  public get langName() {
-    return this._langService.currentLang.name;
+  public get currentLang(): string {
+    return this._langService.currentLang.id;
+  }
+
+  public set currentLang(val: string) {
   }
 
 }
