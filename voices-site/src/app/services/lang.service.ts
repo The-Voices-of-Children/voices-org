@@ -1,4 +1,4 @@
-import { LOCALE_ID, Inject, Injectable } from '@angular/core';
+import { LOCALE_ID, Inject, Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +6,8 @@ import { LOCALE_ID, Inject, Injectable } from '@angular/core';
 export class LangService {
 
   private _currentLang: string | undefined;
+
+  private _langChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   private _availableLangs: Lang[] = [
     new Lang("uk", "Українська"),
@@ -19,6 +21,10 @@ export class LangService {
     return this._currentLang != undefined;
   }
 
+  public get OnLangPopulated(): EventEmitter<boolean> {
+    return this._langChange;
+  }
+
   public setCurrentLangId(langId: string) {
     if (this.currentLangDefined) {
       throw `Can not set current language to '${langId}',`
@@ -28,6 +34,7 @@ export class LangService {
       throw `Language '${langId}' is not supported.`;
     }
     this._currentLang = langId;
+    this._langChange.emit(true);
   }
 
   public get currentLang(): Lang {
@@ -42,7 +49,7 @@ export class LangService {
     return this._availableLangs.map(i => i);
   }
 
-  private get currentLangId() {
+  public get currentLangId() {
     if (!this.currentLangDefined) {
       return this._defaultLang;
     }

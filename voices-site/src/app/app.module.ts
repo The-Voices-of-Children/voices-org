@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgSelectModule } from '@ng-select/ng-select';
 
@@ -28,6 +29,7 @@ import { LangSelectComponent } from './lang-select/lang-select.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireStorageModule,
     AngularSvgIconModule.forRoot(),
     NgSelectModule
   ],
