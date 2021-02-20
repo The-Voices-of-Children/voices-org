@@ -2,12 +2,16 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-    <trans-unit id="testId" datatype="html">
-      <target state="new">Hello!</target>
-    </trans-unit>
-    <trans-unit id="testId1" datatype="html">
-      <target state="new">I am here!</target>
-    </trans-unit>
+      <trans-unit id="CURRENT_LANG" datatype="html">
+        <!-->This variable is required to detect the current language in runtime.<-->
+        <target state="new">en</target>
+      </trans-unit>
+      <trans-unit id="testId" datatype="html">
+        <target state="new">Hello!</target>
+      </trans-unit>
+      <trans-unit id="testId1" datatype="html">
+        <target state="new">I am here!</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

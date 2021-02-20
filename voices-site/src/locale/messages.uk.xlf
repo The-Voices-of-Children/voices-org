@@ -2,6 +2,10 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="uk" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="CURRENT_LANG" datatype="html">
+        <!-->This variable is required to detect the current language in runtime.<-->
+        <target state="new">uk</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

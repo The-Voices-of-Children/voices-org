@@ -8,3 +8,5 @@
 </div>
 
 <router-outlet></router-outlet>
+<!-- Workaround to detect current language. There's no straight forward way in i18n to do it. -->
+<span #currentLang hidden i18n="@@CURRENT_LANG">uk</span>
