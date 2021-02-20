@@ -56,7 +56,7 @@
               "localize": ["uk"],
               "aot": true,
               "outputPath": "dist/browser/",
-              "baseHref": "/"
+              "baseHref": "/uk/"
             },
             "production": {
               "fileReplacements": [

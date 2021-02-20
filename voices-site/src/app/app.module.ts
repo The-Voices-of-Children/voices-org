@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
+import { LangSelectComponent } from './lang-select/lang-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SocialComponent
+    SocialComponent,
+    LangSelectComponent
   ],
   imports: [
     BrowserModule,
