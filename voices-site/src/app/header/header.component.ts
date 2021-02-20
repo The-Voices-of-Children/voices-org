@@ -1,7 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/storage';
-import { Subscription } from 'rxjs';
-import { LangService } from '../services/lang.service';
+import { Component, OnInit } from '@angular/core';
+import { FileService } from '../services/file.service';
 import { Direction } from '../social/social.component';
 
 @Component({
@@ -9,28 +7,18 @@ import { Direction } from '../social/social.component';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
 
   public Direction = Direction;
   private _logoSrc: string = "";
-  private _langSubscription: Subscription | undefined;
 
-  constructor(private readonly _afStorage: AngularFireStorage,
-    private readonly _langService: LangService) { }
-
-  ngOnDestroy(): void {
-    this._langSubscription?.unsubscribe();
-  }
+  constructor(private readonly _fileService: FileService) { }
 
   ngOnInit(): void {
-    this._langSubscription = this._langService.OnLangPopulated.subscribe(() => {
-      let ref = this._afStorage.ref("/locale/" +
-      this._langService.currentLangId + "/header_logo.png");
-      ref.getDownloadURL().toPromise().then(res => {
-        this._logoSrc = res;
-      }, err => {
-        throw "Could not load logo URL."
-      });
+    this._fileService.GetUrlOfLocalized("header_logo.png").then(res => {
+      this._logoSrc = res;
+    }, err => {
+      throw "Could not load logo URL."
     });
   }
 
