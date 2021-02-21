@@ -1,1 +1,14 @@
 $white-color: #FFFFFF;
+$black-color: #000000;
+$light-grey-color: #CCCCCC;
+$grey-color: #6d6d6d;
+
+@font-face {
+    font-family: "Cera_pro";
+    src: local("Cera_pro"), url(./assets/fonts/Cera_pro/Cera_pro_light.ttf) format("truetype");
+}
+
+body {
+    margin: 0;
+    font-family: "Cera_pro";
+}

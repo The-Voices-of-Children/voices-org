@@ -1,11 +1,23 @@
+@import "../../styles.scss";
+
 .header{
     height:75px;
     display: flex;
+    align-items: center;
+    background-color: $white-color;
 
     .logo-wrapper {
-        padding: 5px;
+        margin: 0 20px;
         .logo {
             width: 65px;
         }
+    }
+
+    .menu {
+        flex: 1;
+    }
+
+    .social-container {
+        margin: 0 20px;
     }
 }
