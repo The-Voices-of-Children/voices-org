@@ -1,0 +1,15 @@
+@import "../styles.scss";
+
+app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: visible;
+    z-index: 100;
+}
+
+.router-container {
+    margin-top: $header-height;
+    // TODO: remove the placeholder
+    height: 500px;
+}

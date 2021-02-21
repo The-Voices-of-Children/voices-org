@@ -1,10 +1,12 @@
-
 $theme-color: #72CAED;
 $accent-color: #d17567;
 $white-color: #FFFFFF;
 $black-color: #000000;
 $light-grey-color: #CCCCCC;
 $grey-color: #6d6d6d;
+
+$desktop: "only screen and (min-width: 780px)";
+$header-height: 75px;
 
 @font-face {
     font-family: "Cera_pro";

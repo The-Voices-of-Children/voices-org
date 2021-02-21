@@ -2,7 +2,7 @@
 
     <div class="logo-part">
         <div class="logo-wrapper">
-            <img [src]="logoSrc" class="logo">       
+            <img [src]="logoSrc" class="logo">
         </div>
         <div class="social-container">
             <app-social [direction]="Direction.horizontal" [size]="'40px'"></app-social>
@@ -18,14 +18,16 @@
 
     <div class="contacts-part">
         <span class="contacts-header" i18n="@@CONTACTS_HEADER">КОНТАКТИ</span>
-        <span class="contacts-item phone-number" *ngFor="let phone of socialRefs?.phone_numbers">
-            {{phone}}
-        </span>
-        <a [href]="'mailto:'+email" class="contacts-item email" *ngFor="let email of socialRefs?.emails">
-            {{email}}
-        </a>
-        <span class="contacts-item address" [innerHTML]="address">
-        </span>
+        <div class="items-container">
+            <span class="contacts-item phone-number" *ngFor="let phone of socialRefs?.phone_numbers">
+                {{phone}}
+            </span>
+            <a [href]="'mailto:'+email" class="contacts-item email" *ngFor="let email of socialRefs?.emails">
+                {{email}}
+            </a>
+            <span class="contacts-item address" [innerHTML]="address">
+            </span>
+        </div>
     </div>
 
 </div>
