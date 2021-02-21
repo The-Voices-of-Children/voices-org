@@ -20,7 +20,7 @@ export class FooterComponent implements OnInit {
     private readonly _appSettingsService: AppSettingsService) { }
 
   ngOnInit(): void {
-    this._fileService.GetUrlOfLocalized("header_logo.png").then(res => {
+    this._fileService.GetUrlOfLocalized("logo.png").then(res => {
       this._logoSrc = res;
     }, error => {
       throw "Could not load logo URL. " + error;
