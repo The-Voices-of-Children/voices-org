@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
 import { LangSelectComponent } from './lang-select/lang-select.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SocialComponent,
-    LangSelectComponent
+    LangSelectComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

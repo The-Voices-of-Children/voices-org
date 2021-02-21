@@ -6,11 +6,11 @@
         <!-->This variable is required to detect the current language in runtime.<-->
         <target state="new">en</target>
       </trans-unit>
-      <trans-unit id="testId" datatype="html">
-        <target state="new">Hello!</target>
+      <trans-unit id="FOOTER_COPYRIGHT" datatype="html">
+        <target state="new">© 2020 The Voices of Children Charitable Foundation</target>
       </trans-unit>
-      <trans-unit id="testId1" datatype="html">
-        <target state="new">I am here!</target>
+      <trans-unit id="CONTACTS_HEADER" datatype="html">
+        <target state="new">CONTACTS</target>
       </trans-unit>
     </body>
   </file>
