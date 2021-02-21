@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   constructor(private readonly _fileService: FileService) { }
 
   ngOnInit(): void {
-    this._fileService.GetUrlOfLocalized("header_logo.png").then(res => {
+    this._fileService.GetUrlOfLocalized("logo.png").then(res => {
       this._logoSrc = res;
     }, err => {
       throw "Could not load logo URL."

@@ -1,17 +1,15 @@
 @import "../../styles.scss";
 
 .lang-item {
-    color: $black-color;
-    text-decoration: none;
     margin: 5px;
     display: block;
+    cursor: pointer;
 }
 
 .lang-select {
     width: 100px;
     background-color: $white-color;
-    border-width: 1px;
-        border-color: $light-grey-color;
+    cursor: pointer;
 
     ::ng-deep .ng-option-selected .lang-item {
         color: $grey-color;
@@ -20,21 +18,11 @@
     ::ng-deep .ng-dropdown-panel {
         background-color: $white-color;
         border-radius: 5px;
-        // border-width: 1px;
-        // border-color: $light-grey-color;
-        // border-style: solid;
         box-shadow: 0 4px 8px 0 $light-grey-color, 0 6px 20px 0 $light-grey-color;
+        cursor: pointer;
     }
-}
 
-.ng-select .ng-arrow-wrapper .ng-arrow {
-    display: none;
-}
-
-.ng-select span.ng-arrow-wrapper:before {
-    content: "\f0ab";
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
+    ::ng-deep .ng-input {
+        cursor: pointer;
+    }
 }

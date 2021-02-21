@@ -26,6 +26,7 @@ export class LangSelectComponent implements OnInit {
   }
 
   public set currentLang(val: string) {
+    window.open(this.langUrl(val),"_self");
   }
 
 }
