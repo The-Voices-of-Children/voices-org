@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, OnInit, Component, ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { AppSettingsService } from './services/app-settings.service';
 import { LangService } from './services/lang.service';
 
 @Component({
@@ -7,11 +9,23 @@ import { LangService } from './services/lang.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-  @ViewChild('currentLang') 
-  public langElement:ElementRef | undefined;
+export class AppComponent implements AfterViewInit, OnInit {
+  @ViewChild('currentLang')
+  public langElement: ElementRef | undefined;
 
-  constructor(private _langService: LangService) {}
+  constructor(
+    private readonly _langService: LangService,
+    private readonly _appSettingsService: AppSettingsService,
+    private readonly _title: Title) { }
+
+  ngOnInit(): void {
+    this._appSettingsService.loadMeta().then(
+      res => {
+        if (res?.title != undefined) {
+          this._title.setTitle(res?.title)
+        }
+      }, error => { throw "Could not load meta." });
+  }
 
   ngAfterViewInit() {
     if (this.langElement == undefined) {
