@@ -19,5 +19,10 @@
         background-color: $white-color;
         border-radius: 5px;
         box-shadow: 0 4px 8px 0 $light-grey-color, 0 6px 20px 0 $light-grey-color;
+        cursor: pointer;
+    }
+
+    ::ng-deep .ng-input {
+        cursor: pointer;
     }
 }

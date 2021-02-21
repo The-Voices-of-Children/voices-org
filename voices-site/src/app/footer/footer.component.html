@@ -21,9 +21,9 @@
         <span class="contacts-item phone-number" *ngFor="let phone of socialRefs?.phone_numbers">
             {{phone}}
         </span>
-        <span class="contacts-item email" *ngFor="let email of socialRefs?.emails">
+        <a [href]="'mailto:'+email" class="contacts-item email" *ngFor="let email of socialRefs?.emails">
             {{email}}
-        </span>
+        </a>
         <span class="contacts-item address" [innerHTML]="address">
         </span>
     </div>
