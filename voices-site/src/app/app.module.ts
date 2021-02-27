@@ -15,6 +15,10 @@ import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
 import { LangSelectComponent } from './lang-select/lang-select.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     SocialComponent,
     LangSelectComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ActivitiesComponent,
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
