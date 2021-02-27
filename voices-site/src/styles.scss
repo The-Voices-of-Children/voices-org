@@ -9,12 +9,17 @@ $desktop: "only screen and (min-width: 780px)";
 $header-height: 75px;
 
 @font-face {
-    font-family: "Cera_pro";
-    src: local("Cera_pro"), url(./assets/fonts/Cera_pro/Cera_pro_light.ttf) format("truetype");
+    font-family: "Cera_pro_bold";
+    src: local("Cera_pro_bold"), url(./assets/fonts/Cera_pro/Cera_pro_bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Cera_pro_light";
+    src: local("Cera_pro_light"), url(./assets/fonts/Cera_pro/Cera_pro_light.ttf) format("truetype");
 }
 
 body {
     margin: 0;
     color: $black-color;
-    font-family: "Cera_pro";
+    font-family: "Cera_pro_bold";
 }
