@@ -8,11 +8,14 @@ export class LangService {
   private _currentLang: string | undefined;
 
   private _langChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  private _translationsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   private _availableLangs: Lang[] = [
     new Lang("uk", "Українська"),
     new Lang("en", "English")
   ];
+
+  private _translations: Map<string, string> = new Map<string, string>();
 
   constructor(@Inject(LOCALE_ID) private _defaultLang: string) {
   }
@@ -23,6 +26,10 @@ export class LangService {
 
   public get OnLangPopulated(): EventEmitter<boolean> {
     return this._langChange;
+  }
+
+  public get OnTranslationsPopulated(): EventEmitter<boolean> {
+    return this._translationsChange;
   }
 
   public setCurrentLangId(langId: string) {
@@ -55,7 +62,23 @@ export class LangService {
     }
     return this._currentLang;
   }
-}
+
+  public setTranslations(translations: Map<string, string>) {
+    if (this._translations.size > 0) {
+      throw "translations have been already populated.";
+    }
+    this._translations = translations;
+    this._translationsChange.emit(true);
+  }
+
+  public translate(key: string): string {
+    var trKey = key;
+    if (trKey.startsWith("@@")) {
+      trKey = trKey.substr(2);
+    }
+    return this._translations.get(trKey) || key;
+  }
+ }
 
 export class Lang {
   private readonly _name: string;

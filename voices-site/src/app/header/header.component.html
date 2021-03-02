@@ -1,40 +1,12 @@
 <div class="header">
-    <div class="logo-wrapper">
-        <img [src]="logoSrc" class="logo">       
-    </div>
-    <div class="menu"></div>
-    <!-- <div class="menu">
-        <div class="t228__centercontainer">
-            <ul class="t228__list ">
-                <li class="t228__list_item"><a class="t-menu__link-item" href="#rec202621011" data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="1">Наша діяльність</a> </li>
-                <li class="t228__list_item"><a class="t-menu__link-item" href="#rec202711333" data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="2">Хто ми</a> </li>
-                <li class="t228__list_item"><a class="t-menu__link-item" href="#rec236046903" data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="3">Наша команда</a> </li>
-                <li class="t228__list_item"><a class="t-menu__link-item" href="#rec203032223" data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="4">ЗМІ про нас</a> </li>
-                <li class="t228__list_item"><a class="t-menu__link-item" href="#rec203205533" data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="5">Волонтерство</a> </li>
-                <li class="t228__list_item"><a class="t-menu__link-item" href="http://en.voices.org.ua/"
-                        data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="6">EN</a> </li>
-                <li class="t228__list_item"><a class="t-menu__link-item" href="http://de.voices.org.ua/"
-                        data-menu-submenu-hook=""
-                        style="color:#000000;font-size:16px;font-weight:400;font-family:'FuturaPT';"
-                        data-menu-item-number="7">DE</a> </li>
-            </ul>
+        <app-menu class="menu"></app-menu>
+        <div class="logo-wrapper">
+                <img [src]="logoSrc" class="logo">
         </div>
-    </div> -->
-    <app-lang-select></app-lang-select>
-    <div class="social-container">
-        <app-social [direction]="Direction.horizontal" [size]="'40px'"></app-social>
-    </div>
-    <div class="t228__padding40px"></div>
+        <div class="middle"></div>
+        <app-lang-select></app-lang-select>
+        <div class="social-container">
+                <app-social [direction]="Direction.horizontal" [size]="'40px'"></app-social>
+        </div>
+        <div class="t228__padding40px"></div>
 </div>

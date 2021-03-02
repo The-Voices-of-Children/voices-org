@@ -6,6 +6,21 @@
         <!-->This variable is required to detect the current language in runtime.<-->
         <target state="new">uk</target>
       </trans-unit>
+      <trans-unit id="FOOTER_COPYRIGHT" datatype="html">
+        <target state="new">© 2020 Благодійний фонд «Голоси дітей»</target>
+      </trans-unit>
+      <trans-unit id="CONTACTS_HEADER" datatype="html">
+        <target state="new">КОНТАКТИ</target>
+      </trans-unit>
+      <trans-unit id="MENU_HOME" datatype="html">
+        <target state="new">Головна</target>
+      </trans-unit>
+      <trans-unit id="MENU_ACTIVITIES" datatype="html">
+        <target state="new">Наша діяльність</target>
+      </trans-unit>
+      <trans-unit id="MENU_ABOUT" datatype="html">
+        <target state="new">Хто ми</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

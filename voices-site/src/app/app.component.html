@@ -3,6 +3,4 @@
     <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
-
-<!-- Workaround to detect current language. There's no straight forward way in i18n to do it. -->
-<span #currentLang hidden i18n="@@CURRENT_LANG">uk</span>
+<app-lang-loader></app-lang-loader>

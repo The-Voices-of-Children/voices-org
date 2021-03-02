@@ -1,0 +1,11 @@
+<div (mouseenter)="showMenu()" (mouseleave)="hideMenu()" (click)="openedItemClick($event)">
+    <div class="menu-button" (click)="switchMenu()">
+        <svg-icon class="svg-holder" src="assets/menu.svg"></svg-icon>
+    </div>
+    <div class="menu-nav" [class]="menuOpened ? 'opened' : 'closed'">
+        <a *ngFor="let option of options" class="menu-item" [routerLink]="'/' + option.relativeUrl" routerLinkActive="active" (click)="hideMenu()">
+            {{option.translatedVal}}
+        </a>
+        <app-social [direction]="Direction.horizontal" [size]="'40px'"></app-social>
+    </div>
+</div>

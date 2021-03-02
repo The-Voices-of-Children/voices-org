@@ -1,0 +1,44 @@
+@import "../../styles.scss";
+
+$button-size: 40px;
+
+.menu-button {
+    position: relative;
+    margin-top: $header-height / 2;
+    top: -$button-size / 2;
+    height: $button-size;
+    width: $button-size;
+    cursor: pointer;
+    margin-left: 20px;
+
+    .svg-holder {
+        height: 100%;
+        width: 100%;
+    }
+}
+.menu-nav {
+    position: absolute;
+    top: 100%;
+    width: 0;
+    background-color: $white-color;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &.opened {
+        width: auto;
+        padding: 30px;
+        box-shadow: 0 4px 8px 0 $light-grey-color, 0 6px 20px 0 $light-grey-color;
+    }
+
+    .menu-item {
+        color: $black-color;
+        text-decoration: none;
+        margin: 10px;
+        padding: 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

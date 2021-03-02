@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MenuComponent } from './menu/menu.component';
+import { LangLoaderComponent } from './lang-loader/lang-loader.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     ActivitiesComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MenuComponent,
+    LangLoaderComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,15 @@
       <trans-unit id="CONTACTS_HEADER" datatype="html">
         <target state="new">CONTACTS</target>
       </trans-unit>
+      <trans-unit id="MENU_HOME" datatype="html">
+        <target state="new">Home</target>
+      </trans-unit>
+      <trans-unit id="MENU_ACTIVITIES" datatype="html">
+        <target state="new">Our activities</target>
+      </trans-unit>
+      <trans-unit id="MENU_ABOUT" datatype="html">
+        <target state="new">About us</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
