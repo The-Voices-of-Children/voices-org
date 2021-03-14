@@ -1,0 +1,58 @@
+@import "../../styles.scss";
+
+.concent-background {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1000;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+    background-color: $grey-color;
+
+    &.hidden {
+        display: none;
+    }
+}
+.consent-holder {
+    $popup-width: 350px;
+    $popup-height: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: $popup-width;
+    height: $popup-height;
+    margin-left: -$popup-width/2;
+    margin-top: -$popup-height/2;
+    z-index: 1001;
+    background-color: $white-color;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 $light-grey-color, 0 6px 20px 0 $light-grey-color;
+
+    &.hidden {
+        display: none;
+    }
+
+    .text {
+        display: block;
+        margin-top: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+    }
+
+    .button {
+        cursor: pointer;
+    }
+
+    .button-ok {
+        margin-right: 20px;
+    }
+}

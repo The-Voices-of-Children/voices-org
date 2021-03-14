@@ -21,6 +21,15 @@
       <trans-unit id="MENU_ABOUT" datatype="html">
         <target state="new">About us</target>
       </trans-unit>
+      <trans-unit id="CONSENT_TEXT" datatype="html">
+        <target state="new">Accept cookies from this website on this browser?</target>
+      </trans-unit>
+      <trans-unit id="CONSENT_OK_BUTTON" datatype="html">
+        <target state="new">Allow</target>
+      </trans-unit>
+      <trans-unit id="CONSENT_DECLINE_BUTTON" datatype="html">
+        <target state="new">Deny</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

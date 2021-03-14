@@ -21,6 +21,15 @@
       <trans-unit id="MENU_ABOUT" datatype="html">
         <target state="new">Хто ми</target>
       </trans-unit>
+      <trans-unit id="CONSENT_TEXT" datatype="html">
+        <target state="new">Дозволити використання файлів кукі?</target>
+      </trans-unit>
+      <trans-unit id="CONSENT_OK_BUTTON" datatype="html">
+        <target state="new">Дозволити</target>
+      </trans-unit>
+      <trans-unit id="CONSENT_DECLINE_BUTTON" datatype="html">
+        <target state="new">Заборонити</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

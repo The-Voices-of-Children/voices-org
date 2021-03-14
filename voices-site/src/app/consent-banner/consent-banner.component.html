@@ -1,0 +1,9 @@
+<div class="concent-background" [class.hidden]="isHidden">
+</div>
+<div class="consent-holder" [class.hidden]="isHidden">
+    <span class="text" i18n="@@CONSENT_TEXT">-</span>
+    <div class="buttons">
+        <button class="button button-ok" i18n="@@CONSENT_OK_BUTTON" (click)="allowClick()">-</button>
+        <button class="button button-cancel" i18n="@@CONSENT_DECLINE_BUTTON" (click)="denyClick()">-</button>
+    </div>
+</div>
